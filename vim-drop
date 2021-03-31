@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#
+# Open file in the vim windos
+# Vim Terminal command
+#
+# $ vim-drop [file]
+#
+
+if [ "x$1" = "x" ]; then
+  echo "Usadge: $0 [filename]"
+  exit 1
+fi
+
+if [ "x$VIM TERMINAL" = "x" ]; then
+  echo "Does not work outside of Vim's terminal"
+  exit 1
+fi
+
+FILE=$(readlink -n $1)
+
+if [ $? -ne 0 ]; then
+    echo -e "\x1b]51;[\"drop\",\"$1\"]\x07"
+else
+    echo -e "\x1b]51;[\"drop\",\"$FILE\"]\x07"
+fi
+
