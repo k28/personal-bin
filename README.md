@@ -12,6 +12,8 @@
   
   パスワードを生成する
   
+- show-git-branch-with-description.sh
+  gitのブランチを説明と一緒に表示する
 
 
 <!-- vim:set ft=markdown ts=2 sw=2 sts=2: -->
