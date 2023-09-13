@@ -18,7 +18,7 @@ if [[ ! -f $nVimProjectInfoFile ]]; then
 fi
 nVimProjectDir=`cat ${nVimProjectInfoFile}`
 # configureの引数
-nConfigure="./configure --enable-multibyte --enable-perlinterp --disable-selinux --enable-python3interp=yes --enable-luainterp=yes --enable-pythoninterp=yes"
+nConfigure="./configure --enable-multibyte --enable-perlinterp --disable-selinux --enable-rubyinterp=dynamic --enable-python3interp=dynamic --enable-luainterp=yes --enable-pythoninterp=dynamic"
 
 # 終了ステータスを確認して、失敗していたらメッセージを表示して終了する
 # 使用例
